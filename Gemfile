@@ -1,9 +1,13 @@
 source 'https://rubygems.org'
 
+#gem 'acts-as-taggable-on', :require => false
+
 gem 'rails', '3.2.6'
 
 group :development, :test do
-  gem 'sqlite3', '1.3.5'
+  gem 'sqlite3'
+  gem 'sqlite3-ruby', '1.3.1', :require => 'sqlite3'
+  gem 'jquery-rails'
   gem 'rspec-rails', '2.10.0'
 end
 
@@ -15,7 +19,7 @@ group :assets do
   gem 'uglifier', '1.2.3'
 end
 
-gem 'jquery-rails', '2.0.0'
+#gem 'jquery-rails', '2.0.0'
 
 group :test do
   gem 'capybara', '1.1.2'
