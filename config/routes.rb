@@ -1,9 +1,19 @@
 SampleApp::Application.routes.draw do
-  get "static_pages/home"
 
-  get "static_pages/help"
+    root to: 'static_pages#home'
 
-  get "static_pages/about"
+    match '/',    to: 'static_pages#home'
+    match '/help',    to: 'static_pages#help'
+    match '/about',   to: 'static_pages#about'
+    match '/contact', to: 'static_pages#contact'
+
+    # get "static_pages/home"
+    # get "static_pages/help"
+    # get "static_pages/about"
+    # get "static_pages/contact"
+
+  # about_path => '/about'
+  # about_url => 'http://localhost:3000/about'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -19,7 +29,6 @@ SampleApp::Application.routes.draw do
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
-  # Sample resource route with options:
   #   resources :products do
   #     member do
   #       get 'short'
