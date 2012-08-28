@@ -14,6 +14,10 @@ class User < ActiveRecord::Base
   has_secure_password
   has_many :microposts, dependent: :destroy
 
+  # follower/followed relationship
+  has_many :relationships, foreign_key: "follower_id", dependent: :destroy
+  has_many :followed_users, through: :relationships, source: :followed #???
+
   before_save { |user| user.email = email.downcase }
   before_save :create_remember_token
 

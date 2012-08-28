@@ -1,5 +1,10 @@
 @import "bootstrap";
 
+.comingsoon body {
+  background-image:url('/images/coming-soon.gif');  
+}
+
+
 /* universal */
 
 html {
@@ -200,8 +205,9 @@ input, textarea, select, .uneditable-input {
   margin: 10px 0 0 0;
 
   li {
-    padding: 10px 0;
+    padding: 20px 0;
     border-top: 1px solid #e8e8e8;
+    /*border: 1px solid #e8e8e8;*/
   }
 }
 .content {
@@ -220,7 +226,6 @@ aside {
     margin-bottom: 5px;
   }
 }
-
 
 
 
